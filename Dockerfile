@@ -6,7 +6,7 @@ ARG ANSIBLE_VERSION=2.7.0-r1
 RUN apk add --update ansible openssh-client sshpass && \
     rm -rf /var/cache/apk/*
 
-COPY ./ansible.cfg .
-COPY ./files .
+COPY ./ansible.cfg /etc/ansible/ansible.cfg
+COPY ./files /app
 
 #ENTRYPOINT ["/usr/bin/ansible-playbook"]
