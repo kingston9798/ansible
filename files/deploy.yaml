@@ -4,6 +4,9 @@
   become: yes
   become_user: root
   tasks:
-    - name: update
+    - name: pull image
+      shell:
+        cmd: docker pull {{docker_image}}
+    - name: update image
       shell:
         cmd: docker service update --image {{docker_image}} traefik_nodejs
