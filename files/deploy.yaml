@@ -1,8 +1,6 @@
 ---
 - name: Deploy
   hosts: all
-  become: yes
-  become_user: root
   tasks:
     - name: pull image
       shell:
