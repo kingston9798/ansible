@@ -9,4 +9,4 @@ RUN apk add --update ansible openssh-client sshpass && \
 WORKDIR /app
 COPY ./files /app
 
-ENTRYPOINT ["/usr/bin/ansible-playbook"]
+#ENTRYPOINT ["/usr/bin/ansible-playbook"]
