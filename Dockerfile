@@ -6,4 +6,7 @@ ARG ANSIBLE_VERSION=2.7.0-r1
 RUN apk add --update ansible openssh-client && \
     rm -rf /var/cache/apk/*
 
+WORKDIR /app
+COPY ./files /app
+
 ENTRYPOINT ["/usr/bin/ansible-playbook"]

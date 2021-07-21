@@ -1,0 +1,9 @@
+---
+- name: Deploy_user_service_docker_image
+  hosts: all
+  become: yes
+  become_user: root
+  tasks:
+    - name: Update_docker_image # with docker-compose 
+       shell:
+         cmd: docker service update --image {{docer_image}} traefik_nodejs

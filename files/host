@@ -1,0 +1,2 @@
+[nodejs]
+devopstest.ddns.net ansible_user=kingston_9798 ansible_password={{ssh_pass}}
